@@ -1,0 +1,16 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using NHibernate;
+
+namespace NHEntity.Entities
+{
+    [Serializable]
+    public class $tablename$ {
+        #region $tablename$
+        $table_pk_property$
+        $table_nopl_property$
+        #endregion
+    }
+}

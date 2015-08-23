@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="NHEntity" namespace="NHEntity.Entities">
+	<class name="NHEntity.Entities.WebUser,NHEntity" table="WebUser">
+		<id name="ID" column="ID" type="Int32" unsaved-value="0">
+			<generator class="increment"/>
+		</id>
+		<property name="LoginID" column="LoginID" type="String"  /> 
+        <property name="Password" column="Password" type="String"  /> 
+        <property name="Name" column="Name" type="String"  /> 
+        <property name="WebsiteList" column="WebsiteList" type="String"  /> 
+        <property name="StateWebSupperManager" column="StateWebSupperManager" type="Int32"  /> 
+        <property name="Permissions" column="Permissions" type="String"  /> 
+        <property name="InTime" column="InTime" type="DateTime"  /> 
+        <property name="OutTime" column="OutTime" type="DateTime"  /> 
+        <property name="RoleList" column="RoleList" type="String"  /> 
+        <property name="StateEnable" column="StateEnable" type="Int32"  /> 
+
+	</class>
+</hibernate-mapping>

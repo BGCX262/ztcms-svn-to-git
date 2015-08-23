@@ -1,0 +1,107 @@
+﻿@model ZT.Web.Models.AlertModels
+@{
+    Layout = null;
+}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>用户登陆中心</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="@Url.Content("~/ResBackstage/css/login.css")" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="@Url.Content("~/ResBackstage/Scripts/jquery-1.5.1.min.js")"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#submitA").bind("click", function () {
+                document.forms["loginform"].submit();
+            });
+            $("#btncannel").bind("click", function () {
+                document.forms["loginform"].reset();
+                return false;
+            });
+
+            $("#inputuid").bind("focus", function () {
+                if ($.trim($(this).val()) == "输入帐号") {
+                    $(this).val("");
+                }
+            });
+            $("#inputuid").bind("blur", function () {
+                if ($.trim($(this).val()) == "") {
+                    $(this).val("输入帐号");
+                }
+            });
+
+            $("#inputpsd").bind("focus", function () {
+                if ($.trim($(this).val()) == "输入密码") {
+                    $(this).val("");
+                }
+            });
+            $("#inputpsd").bind("blur", function () {
+                if ($.trim($(this).val()) == "") {
+                    $(this).val("输入密码");
+                }
+            });
+        })
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <div>
+            <img src="@Url.Content("~/ResBackstage/images/login_top_bg.jpg")" width="1000" height="152"
+                alt="" /></div>
+        <div class="login">
+            <div class="login_nn">
+                @{
+                    IDictionary<string, object> formAttribute = new Dictionary<string, object>();
+                    formAttribute.Add("name", "loginform");
+                    using (Html.BeginForm("Index", "Login", FormMethod.Post, formAttribute))
+                    {
+                    @Html.AntiForgeryToken()
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td width="33%" height="55">
+                            </td>
+                            <td height="55" colspan="2">
+                                <input type="text" value="输入帐号" class="inp1" name="userId" id="inputuid"  />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td height="55">
+                            </td>
+                            <td height="55" colspan="2">
+                                <input type="text" value="输入密码" class="inp1" name="password" id="inputpsd" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td height="55">
+                            </td>
+                            <td width="130" height="55">
+                                <input type="text" class="inp2" name="checkcode" />
+                            </td>
+                            <td width="160">
+                                <img src="@Url.Action("Checkcode", "Login")" width="95" height="31" alt="" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td height="55">
+                            </td>
+                            <td height="55" colspan="2">
+                                <a href="#" id="submitA">
+                                    <img src="@Url.Content("~/ResBackstage/images/login_dl.jpg")" width="83" height="35" style="margin-right: 15px;"
+                                        alt="" /></a><a href="#" id="btncannel"><img src="@Url.Content("~/ResBackstage/images/login_cz.jpg")"
+                                            width="83" height="35" alt="" /></a>
+                            </td>
+                        </tr>
+                    </table>
+                    }
+                }
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var msg = "@Html.DisplayFor(model => model.Message)";
+        if (msg != "") {
+            alert(msg);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="NHEntity" namespace="NHEntity.Entities">
+	<class name="NHEntity.Entities.$tablename$,NHEntity" table="$tablename$">
+		<id name="$table_pk$" column="$table_pk$" type="$table_pk_type$" unsaved-value="0">
+			<generator class="increment"/>
+		</id>
+		$table_nopl_property$
+	</class>
+</hibernate-mapping>

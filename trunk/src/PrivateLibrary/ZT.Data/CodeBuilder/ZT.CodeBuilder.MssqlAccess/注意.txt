@@ -1,0 +1,2 @@
+﻿使用NHibernate模式时
+Build Action 需要设置为 Embedded Resource

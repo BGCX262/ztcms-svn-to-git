@@ -1,0 +1,23 @@
+﻿//本文件由程序生成，$tablename$ 为表名，"$table_pk$"为主键名
+
+using System;
+using System.Data;
+using System.Data.SqlClient;
+using System.Data.OleDb;
+using System.Data.Common;
+
+namespace DataAccess
+{
+    /// <summary>
+    /// $tablename$Access 的摘要说明。
+    /// </summary>
+    public class $tablename$Access : BaseAccess
+    {
+        public $tablename$Access(DBManager objDBManager)
+            : base(objDBManager)
+        {
+            this.m_TableName = "$tablename$";
+            this.m_PKName = "$table_pk$";
+        }
+    }
+}

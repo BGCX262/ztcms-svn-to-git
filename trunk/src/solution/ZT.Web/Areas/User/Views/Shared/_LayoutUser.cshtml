@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>@ViewBag.Title</title>
+    <link href="@Url.Content("~/ResBackstage/css/css.css")" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="top">
+        <div class="out">
+            <b>[Admin] 欢迎您</b> 2011年10月12日 星期3 16:46:25 <a href="#">帐号管理</a> | <a href="#">安全退出</a></div>
+    </div>
+    <div class="nav">
+        <div class="gn" onmouseover="getElementById('gn_li').style.display='block'" onmouseout="getElementById('gn_li').style.display='none'">
+            <span style="padding-left: 20px;">功能导航[<b style="color: #fef007">18</b>]个</span>
+            <ul class="gn_li" id="gn_li">
+                <li><a href="#">企业信息</a></li>
+                <li><a href="#">企业信息</a></li>
+                <li><a href="#">企业信息</a></li>
+            </ul>
+        </div>
+        <ul class="list">
+            <li><a href="#">企业信息</a></li>
+            <li><a href="#">实名认证</a></li>
+            <li><a href="#">栏目管理</a></li>
+            <li><a href="#">评论管理</a></li>
+            <li><a href="#">审核文章</a></li>
+            <li><a href="#">广告管理</a></li>
+            <li><a href="#">数据报表</a></li>
+        </ul>
+    </div>
+    <div class="leftbar">
+        <p>
+            <img src="@Url.Content("~/ResBackstage/images/all_left_top.jpg")" style="height: 5px;width: 190px;display: block;" alt=""/>
+            </p>
+        <div class="bb">
+            <ul>
+                <li><a href="#">企业信息</a>
+                    <ul>
+                        <li><a href="#">修改公司资料</a></li>
+                        <li><a href="#">修改密码</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">实名认证</a>
+                    <ul>
+                        <li><a href="#">商家认证</a></li>
+                        <li><a href="#">个人认证</a></li>
+                        <li><a href="#">资质荣誉</a></li>
+                        <li><a href="#">实景图片</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">网站栏目管理</a></li>
+                <li><a href="#">网站评论管理</a></li>
+                <li><a href="#">待审核文章</a></li>
+                <li><a href="#">内容回收站</a></li>
+                <li><a href="#">短信群发</a></li>
+                <li><a href="#">广告管理</a></li>
+                <li><a href="#">数据报表</a></li>
+            </ul>
+        </div>
+    </div>
+    @RenderBody()
+</body>
+</html>

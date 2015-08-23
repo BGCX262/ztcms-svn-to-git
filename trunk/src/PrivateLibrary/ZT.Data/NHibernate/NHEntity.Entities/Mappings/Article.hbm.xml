@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="NHEntity" namespace="NHEntity.Entities">
+	<class name="NHEntity.Entities.Article,NHEntity" table="Article">
+		<id name="ID" column="ID" type="Int32" unsaved-value="0">
+			<generator class="increment"/>
+		</id>
+		<property name="Title" column="Title" type="String"  /> 
+        <property name="SubTitle" column="SubTitle" type="String"  /> 
+        <property name="Content" column="Content" type="String"  /> 
+        <property name="MainPic" column="MainPic" type="String"  /> 
+        <property name="MainMiniPic" column="MainMiniPic" type="String"  /> 
+        <property name="ArticleInMan" column="ArticleInMan" type="String"  /> 
+        <property name="Summary" column="Summary" type="String"  /> 
+        <property name="InTime" column="InTime" type="DateTime"  /> 
+        <property name="IssueTime" column="IssueTime" type="DateTime"  /> 
+        <property name="KeyWords" column="KeyWords" type="String"  /> 
+        <property name="Description" column="Description" type="String"  /> 
+        <property name="FilePath" column="FilePath" type="String"  /> 
+        <property name="VedioPath" column="VedioPath" type="String"  /> 
+        <property name="SeoTitle" column="SeoTitle" type="String"  /> 
+        <property name="SeoKeywords" column="SeoKeywords" type="String"  /> 
+        <property name="Seodescription" column="Seodescription" type="String"  /> 
+        <property name="Author" column="Author" type="String"  /> 
+        <property name="ArticleSource" column="ArticleSource" type="String"  /> 
+        <property name="RedirectUrl" column="RedirectUrl" type="String"  /> 
+        <property name="Expand" column="Expand" type="String"  /> 
+        <property name="Recycling" column="Recycling" type="Int32"  /> 
+        <property name="WSID" column="WSID" type="Int32"  /> 
+        <property name="BelongsField" column="BelongsField" type="String"  /> 
+        <property name="Stage" column="Stage" type="String"  /> 
+        <property name="Funds" column="Funds" type="String"  /> 
+        <property name="HasSample" column="HasSample" type="Int32"  /> 
+        <property name="Identify" column="Identify" type="Int32"  /> 
+        <property name="Transfer" column="Transfer" type="String"  /> 
+        <property name="License" column="License" type="String"  /> 
+        <property name="Cooperation" column="Cooperation" type="String"  /> 
+        <property name="OtherTransfer" column="OtherTransfer" type="String"  /> 
+        <property name="Background" column="Background" type="String"  /> 
+        <property name="Innovation" column="Innovation" type="String"  /> 
+        <property name="Implement" column="Implement" type="String"  /> 
+        <property name="Outlook" column="Outlook" type="String"  /> 
+        <property name="Scale" column="Scale" type="String"  /> 
+        <property name="Benefit" column="Benefit" type="String"  /> 
+        <property name="ApplyField" column="ApplyField" type="String"  /> 
+        <property name="NeedFunds" column="NeedFunds" type="String"  /> 
+        <property name="BeginTime" column="BeginTime" type="DateTime"  /> 
+        <property name="EndTime" column="EndTime" type="DateTime"  /> 
+        <property name="PlanEndTime" column="PlanEndTime" type="DateTime"  /> 
+        <property name="EffectiveTime" column="EffectiveTime" type="String"  /> 
+        <property name="Organize" column="Organize" type="String"  /> 
+        <property name="Tel" column="Tel" type="String"  /> 
+        <property name="Mobile" column="Mobile" type="String"  /> 
+        <property name="DemandSummary" column="DemandSummary" type="String"  /> 
+        <property name="Targets" column="Targets" type="String"  /> 
+        <property name="CurrentBase" column="CurrentBase" type="String"  /> 
+        <property name="CooperationMode" column="CooperationMode" type="String"  /> 
+        <property name="AboutField" column="AboutField" type="String"  /> 
+        <property name="Sex" column="Sex" type="Int32"  /> 
+        <property name="Berthday" column="Berthday" type="DateTime"  /> 
+        <property name="Professional" column="Professional" type="String"  /> 
+        <property name="Skill" column="Skill" type="String"  /> 
+        <property name="PlaceUnit" column="PlaceUnit" type="String"  /> 
+        <property name="JobTitle" column="JobTitle" type="String"  /> 
+        <property name="City" column="City" type="String"  /> 
+        <property name="ZipCode" column="ZipCode" type="String"  /> 
+        <property name="Fax" column="Fax" type="String"  /> 
+        <property name="Email" column="Email" type="String"  /> 
+        <property name="Industry" column="Industry" type="String"  /> 
+        <property name="Address" column="Address" type="String"  /> 
+        <property name="ContectPeople" column="ContectPeople" type="String"  /> 
+        <property name="WebUrl" column="WebUrl" type="String"  /> 
+        <property name="SelfType" column="SelfType" type="String"  /> 
+        <property name="FinallyCompany" column="FinallyCompany" type="String"  /> 
+        <property name="FinallyPeople" column="FinallyPeople" type="String"  /> 
+        <property name="ContectUnit" column="ContectUnit" type="String"  /> 
+        <property name="Maturity" column="Maturity" type="String"  /> 
+
+	</class>
+</hibernate-mapping>

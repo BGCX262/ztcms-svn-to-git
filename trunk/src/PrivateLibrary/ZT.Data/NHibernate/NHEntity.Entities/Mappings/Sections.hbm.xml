@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="NHEntity" namespace="NHEntity.Entities">
+	<class name="NHEntity.Entities.Sections,NHEntity" table="Sections">
+		<id name="ID" column="ID" type="Int32" unsaved-value="0">
+			<generator class="increment"/>
+		</id>
+		<property name="CName" column="CName" type="String"  /> 
+        <property name="EName" column="EName" type="String"  /> 
+        <property name="FullPath" column="FullPath" type="String"  /> 
+        <property name="Content" column="Content" type="String"  /> 
+        <property name="SectionTempID" column="SectionTempID" type="Int32"  /> 
+        <property name="ArticleTempID" column="ArticleTempID" type="Int32"  /> 
+        <property name="ParentID" column="ParentID" type="Int32"  /> 
+        <property name="SortNo" column="SortNo" type="Int32"  /> 
+        <property name="MainPic" column="MainPic" type="String"  /> 
+        <property name="DisplayState" column="DisplayState" type="Int32"  /> 
+        <property name="AddTime" column="AddTime" type="DateTime"  /> 
+        <property name="Memo" column="Memo" type="String"  /> 
+        <property name="Type" column="Type" type="Int32"  /> 
+        <property name="IssueState" column="IssueState" type="Int32"  /> 
+        <property name="Description" column="Description" type="String"  /> 
+        <property name="Keywords" column="Keywords" type="String"  /> 
+        <property name="SeoTitle" column="SeoTitle" type="String"  /> 
+        <property name="SeoDescription" column="SeoDescription" type="String"  /> 
+        <property name="SeoKeywords" column="SeoKeywords" type="String"  /> 
+        <property name="DataModel" column="DataModel" type="String"  /> 
+        <property name="DataPrototype" column="DataPrototype" type="String"  /> 
+        <property name="DataLabel" column="DataLabel" type="String"  /> 
+        <property name="ParentPath" column="ParentPath" type="String"  /> 
+        <property name="PageName" column="PageName" type="String"  /> 
+        <property name="ReferSectionID" column="ReferSectionID" type="Int32"  /> 
+        <property name="ReferState" column="ReferState" type="Int32"  /> 
+        <property name="Remarks" column="Remarks" type="String"  /> 
+        <property name="RedirectUrl" column="RedirectUrl" type="String"  /> 
+
+	</class>
+</hibernate-mapping>

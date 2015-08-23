@@ -1,0 +1,18 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using IPLibrary.QQIP;
+using System.Web;
+
+namespace IPLibrary.Document
+{
+    class demo
+    {
+        public string DemoFunction(string strIP)
+        {
+            QQIPHelper.Init(HttpContext.Current.Server.MapPath("~/App_Data/qqip.dat"));
+            stLocation sslocalhost = QQIPHelper.GetLocation(strIP);
+            return sslocalhost.Contry;
+        }
+    }
+}

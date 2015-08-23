@@ -1,0 +1,37 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using NHEntity.Entities;
+using NHibernate;
+
+namespace NH.Dal.Collection {
+        public partial class $tablename$Dal {
+        private NHibernateHelper nhibernateHelper = new NHibernateHelper();
+
+        protected ISession Session { get; set; }
+
+        public $tablename$Dal() {
+            this.Session = nhibernateHelper.GetSession();
+        }
+
+        public $tablename$Dal(ISession session) {
+            this.Session = session;
+        }
+
+        public void Create$tablename$($tablename$ $tablename$) {
+            Session.Save($tablename$);
+            Session.Flush();
+        }
+
+        public $tablename$ Get$tablename$ById(int $table_pk$) {
+            return Session.Get<$tablename$>($table_pk$);
+        }
+
+        public IList<$tablename$> Get$tablename$s() {
+            IList<$tablename$> list = null;
+            list = Session.QueryOver<$tablename$>().List();
+            return list;
+        }
+    }
+}

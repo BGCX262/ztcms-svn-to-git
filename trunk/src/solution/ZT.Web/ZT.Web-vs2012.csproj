@@ -1,0 +1,334 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8A39F91F-2C4B-4051-8EEB-B89F771A403C}</ProjectGuid>
+    <ProjectTypeGuids>{E53F8FEA-EAE0-44A6-8774-FFD645390401};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ZT.Web</RootNamespace>
+    <AssemblyName>ZT.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.4.1.10331.0\lib\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.Entity">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Entity">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.ApplicationServices">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Abstractions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Routing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.EnterpriseServices">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Areas\Manager\ManagerAreaRegistration.cs" />
+    <Compile Include="Areas\User\Controllers\ArticleController.cs" />
+    <Compile Include="Areas\User\Controllers\LoginController.cs" />
+    <Compile Include="Areas\User\Controllers\SectionsController.cs" />
+    <Compile Include="Areas\User\Controllers\UserController.cs" />
+    <Compile Include="Areas\User\UserAreaRegistration.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\AlertModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ResBackstage\css\css.css" />
+    <Content Include="ResBackstage\css\login.css" />
+    <Content Include="ResBackstage\images\all_01.jpg" />
+    <Content Include="ResBackstage\images\all_010.jpg" />
+    <Content Include="ResBackstage\images\all_011.jpg" />
+    <Content Include="ResBackstage\images\all_012.jpg" />
+    <Content Include="ResBackstage\images\all_013.jpg" />
+    <Content Include="ResBackstage\images\all_014.jpg" />
+    <Content Include="ResBackstage\images\all_015.jpg" />
+    <Content Include="ResBackstage\images\all_016.jpg" />
+    <Content Include="ResBackstage\images\all_017.jpg" />
+    <Content Include="ResBackstage\images\all_018.jpg" />
+    <Content Include="ResBackstage\images\all_019.jpg" />
+    <Content Include="ResBackstage\images\all_02.jpg" />
+    <Content Include="ResBackstage\images\all_020.jpg" />
+    <Content Include="ResBackstage\images\all_03.jpg" />
+    <Content Include="ResBackstage\images\all_04.jpg" />
+    <Content Include="ResBackstage\images\all_05.jpg" />
+    <Content Include="ResBackstage\images\all_06.jpg" />
+    <Content Include="ResBackstage\images\all_07.jpg" />
+    <Content Include="ResBackstage\images\all_08.jpg" />
+    <Content Include="ResBackstage\images\all_09.jpg" />
+    <Content Include="ResBackstage\images\all_left_top.jpg" />
+    <Content Include="ResBackstage\images\all_nava.jpg" />
+    <Content Include="ResBackstage\images\all_nav_bg.jpg" />
+    <Content Include="ResBackstage\images\all_top.jpg" />
+    <Content Include="ResBackstage\images\all_top_bg.jpg" />
+    <Content Include="ResBackstage\images\ioc1.jpg" />
+    <Content Include="ResBackstage\images\login_bo_bg.jpg" />
+    <Content Include="ResBackstage\images\login_cz.jpg" />
+    <Content Include="ResBackstage\images\login_dl.jpg" />
+    <Content Include="ResBackstage\images\login_inp1.jpg" />
+    <Content Include="ResBackstage\images\login_inp2.jpg" />
+    <Content Include="ResBackstage\images\login_top_bg.jpg" />
+    <Content Include="ResBackstage\images\login_yzm.jpg" />
+    <Content Include="ResBackstage\images\pic_sh.jpg" />
+    <Content Include="ResBackstage\images\pic_tu.jpg" />
+    <Content Include="ResBackstage\images\pic_zr.jpg" />
+    <Content Include="ResBackstage\images\ss_tb.jpg" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Global.asax" />
+    <Content Include="ResBackstage\Scripts\jquery-1.5.1-vsdoc.js" />
+    <Content Include="ResBackstage\Scripts\jquery-1.5.1.js" />
+    <Content Include="ResBackstage\Scripts\jquery-1.5.1.min.js" />
+    <Content Include="ResBackstage\Scripts\jquery-ui-1.8.11.js" />
+    <Content Include="ResBackstage\Scripts\jquery-ui-1.8.11.min.js" />
+    <Content Include="ResBackstage\Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="ResBackstage\Scripts\jquery.validate.js" />
+    <Content Include="ResBackstage\Scripts\jquery.validate.min.js" />
+    <Content Include="ResBackstage\Scripts\modernizr-1.7.js" />
+    <Content Include="ResBackstage\Scripts\modernizr-1.7.min.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Content\Site.css" />
+    <Content Include="ResBackstage\Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="ResBackstage\Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="ResBackstage\Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="ResBackstage\Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="ResBackstage\Scripts\MicrosoftAjax.js" />
+    <Content Include="ResBackstage\Scripts\MicrosoftAjax.debug.js" />
+    <Content Include="ResBackstage\Scripts\MicrosoftMvcAjax.js" />
+    <Content Include="ResBackstage\Scripts\MicrosoftMvcAjax.debug.js" />
+    <Content Include="ResBackstage\Scripts\MicrosoftMvcValidation.js" />
+    <Content Include="ResBackstage\Scripts\MicrosoftMvcValidation.debug.js" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Account\ChangePassword.cshtml" />
+    <Content Include="Views\Account\ChangePasswordSuccess.cshtml" />
+    <Content Include="Views\Account\LogOn.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_LogOnPartial.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Areas\Manager\Controllers\" />
+    <Folder Include="Areas\Manager\Models\" />
+    <Folder Include="Areas\Manager\Views\Shared\" />
+    <Folder Include="Template\" />
+    <Folder Include="Webs\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Manager\Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\User\Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\User\Views\Shared\_LayoutUser.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\User\Views\_ViewStart.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\User\Views\Login\Checkcode.cshtml" />
+    <Content Include="Areas\User\Views\Login\Index.cshtml" />
+    <Content Include="Areas\User\Views\Article\Add.cshtml" />
+    <Content Include="Areas\User\Views\Article\Update.cshtml" />
+    <Content Include="Areas\User\Views\User\Index.cshtml" />
+    <Content Include="Areas\User\Views\Sections\Index.cshtml" />
+    <Content Include="Areas\User\Views\Sections\Add.cshtml" />
+    <Content Include="Areas\User\Views\Sections\Update.cshtml" />
+    <Content Include="Areas\User\Views\Sections\EditContent.cshtml" />
+    <Content Include="Areas\User\Views\Article\Index.cshtml" />
+    <None Include="ResBackstage\css\_notes\css.css.mno" />
+    <Content Include="Setting\Global.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\PrivateLibrary\ZT.Api\ZT.Api.csproj">
+      <Project>{1EFA69DF-DF56-4597-9439-B5F4A69962DD}</Project>
+      <Name>ZT.Api %28PrivateLibrary\ZT.Api\ZT.Api%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\PrivateLibrary\ZT.Data\NHibernate\NH.Dal\NH.Dal.csproj">
+      <Project>{29E8AE54-27E2-4395-BABA-F34F8A8374EA}</Project>
+      <Name>NH.Dal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\PrivateLibrary\ZT.Data\NHibernate\NHEntity.Entities\NHEntity.csproj">
+      <Project>{2D85EACF-3D47-4E6B-A45A-A9C729C49033}</Project>
+      <Name>NHEntity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\PublicLiberary\UtilityCollection\UtilityCollection.csproj">
+      <Project>{66FE7177-A904-4A21-B5F1-0A52B4103E6A}</Project>
+      <Name>UtilityCollection</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3480</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
